@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julie-Anne - A Lifeline for Those in Need</title>
-    <!-- Include Tailwind CSS CDN Script -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
 
+    <!-- Header -->
     <header class="bg-green-500 text-white py-6">
         <div class="container mx-auto text-center">
             <h1 class="text-3xl font-bold">Welcome to Julie-Anne: A Lifeline for Those in Need</h1>
             <p class="mt-2">Inspiring Hope, One Conversation at a Time</p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/julieannenan" target="_blank" class="mx-2">Facebook</a> |
+                <a href="https://www.twitter.com/julieannenan" target="_blank" class="mx-2">Twitter</a> |
+                <a href="https://www.instagram.com/julieannenan" target="_blank" class="mx-2">Instagram</a>
+            </div>
             <a href="#signup" class="mt-4 inline-block bg-white text-green-500 font-semibold px-4 py-2 rounded-lg hover:bg-gray-200">
                 Sign Up to Find Out More
             </a>
         </div>
     </header>
 
+    <!-- What We Do -->
     <section class="py-10">
         <div class="container mx-auto">
             <h2 class="text-2xl font-bold text-center mb-6">What We Do</h2>
@@ -48,39 +54,7 @@
         </div>
     </section>
 
-    <section class="py-10 bg-green-50">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-bold text-center mb-6">Immediate Support Resources</h2>
-            <p class="text-center mb-6">If you or someone you know is in crisis, please reach out to the following organizations for immediate help:</p>
-            <ul class="space-y-4">
-                <li class="text-center">
-                    <a href="https://www.samaritans.org/" target="_blank" class="text-green-600 font-semibold">Samaritans - Free 24/7 Support</a> - Call: <span class="text-gray-800">116 123</span>
-                </li>
-                <li class="text-center">
-                    <a href="https://www.mind.org.uk/" target="_blank" class="text-green-600 font-semibold">Mind - Mental Health Charity</a> - Call: <span class="text-gray-800">0300 123 3393</span>
-                </li>
-                <li class="text-center">
-                    <a href="https://www.nhs.uk/mental-health/" target="_blank" class="text-green-600 font-semibold">NHS Mental Health Services</a> - Call: <span class="text-gray-800">111</span>
-                </li>
-                <li class="text-center">
-                    <a href="https://www.papyrus-uk.org/" target="_blank" class="text-green-600 font-semibold">PAPYRUS - Prevention of Young Suicide</a> - Call HOPELINEUK: <span class="text-gray-800">0800 068 4141</span>
-                </li>
-                <li class="text-center">
-                    <a href="https://www.thecalmzone.net/" target="_blank" class="text-green-600 font-semibold">CALM - Campaign Against Living Miserably</a> - Call: <span class="text-gray-800">0800 58 58 58</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="py-10">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-bold text-center mb-6">The Heart of Julie-Anne</h2>
-            <p class="text-center mb-6">
-                Julie-Anne was created in memory of my nan, Julie-Anne Fitzgerald, who never judged, always listened, and helped me through some of my darkest times. Her warmth, compassion, and unwavering support inspired me to develop a service that could do the same for others. This platform is a tribute to her legacy—a way to offer hope and comfort to those who feel alone, just as she did for me. Our mission is to reach those who need a kind word, a listening ear, or a reminder that they are not alone.
-            </p>
-        </div>
-    </section>
-
+    <!-- Sign-Up Form Section -->
     <section id="signup" class="py-10">
         <div class="container mx-auto text-center">
             <h2 class="text-2xl font-bold mb-6">Be Part of the Change</h2>
@@ -90,17 +64,35 @@
         </div>
     </section>
 
-    <section class="py-10 bg-gray-50">
+    <!-- Blog Overview -->
+    <section class="py-10" id="blog">
         <div class="container mx-auto">
-            <h2 class="text-2xl font-bold text-center mb-6">Latest Mental Health News</h2>
-            <p class="text-center mb-6">Stay informed with the latest updates in mental health support:</p>
-            <div class="flex justify-center">
-                <rssapp-carousel id="OD8TOFG54ESjox9C"></rssapp-carousel>
-                <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
-            </div>
+            <h2 class="text-2xl font-bold text-center mb-6">Blog</h2>
+            <ul class="space-y-4">
+                <li><a href="#grief-is-just-love" class="text-green-500 underline">Grief is Just Love With Nowhere to Go</a></li>
+                <li><a href="#a-day-when-everything-felt-too-much" class="text-green-500 underline">A Day When Everything Felt Too Much</a></li>
+                <li><a href="#when-little-things-feel-overwhelming" class="text-green-500 underline">When the Little Things Feel Overwhelming</a></li>
+                <li><a href="#loneliness-a-quiet-companion" class="text-green-500 underline">Loneliness: A Quiet Companion</a></li>
+                <li><a href="#struggle-with-addiction" class="text-green-500 underline">The Struggle with Addiction: One Step at a Time</a></li>
+                <li><a href="#school-life" class="text-green-500 underline">School Life: It’s Harder Than It Seems</a></li>
+            </ul>
         </div>
     </section>
 
+    <!-- Blog Posts -->
+    <section class="py-10" id="grief-is-just-love">
+        <div class="container mx-auto">
+            <h3 class="text-xl font-bold">Grief is Just Love With Nowhere to Go</h3>
+            <p class="mt-2 text-gray-700">
+                I never truly understood grief until I lost my nan. It’s a strange, hollow feeling—like a part of you has been taken away, leaving an emptiness you can’t quite fill...
+            </p>
+            <a href="#blog" class="text-green-500 underline mt-4 block">Return to Blog Overview</a>
+        </div>
+    </section>
+
+    <!-- (Repeat similar blocks for other blog posts as previously) -->
+
+    <!-- Footer -->
     <footer class="bg-green-500 text-white py-4">
         <div class="container mx-auto text-center">
             <p>Contact Us: <a href="mailto:help@julie-anne.com" class="underline">help@julie-anne.com</a></p>
