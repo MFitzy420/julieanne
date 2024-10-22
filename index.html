@@ -125,16 +125,48 @@
         </div>
     </section>
 
-<!-- Sign-Up Form Section -->
+<!-- Sign-Up Form Section - Simplified -->
 <section id="signup" class="py-10">
     <div class="container mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-6">Be Part of the Change</h2>
-        <p class="mb-6 text-gray-700">Stay updated on our progress and be among the first to know when Julie-Anne goes live. Sign up and become part of a community committed to making a difference.</p>
-        <div class="bg-white p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeD0GGz4dsfpMOnV7qnZMg38V-taWj5hh-QLlSwzuQDMoNqXg/viewform?embedded=true"
-                class="w-full h-96" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
+        <h2 class="text-2xl font-bold mb-4">Be Part of the Change</h2>
+        <p class="mb-4 text-gray-700">Stay updated on our progress and join a community committed to making a difference. Enter your email below:</p>
+        <form id="signupForm" class="bg-white p-4 rounded-lg shadow-lg max-w-md mx-auto">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required
+                class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-green-500">
+            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg w-full font-semibold hover:bg-green-600">
+                Sign Up
+            </button>
+            <p id="responseMessage" class="mt-4 text-green-500 hidden"></p>
+        </form>
     </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const responseMessage = document.getElementById('responseMessage');
+
+            try {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbzOzN1gZWhxCxROmSOk-HaNfW4wb6BgniteWSTPEGW7wW1hmiAXGdaau9tIrkL1iSYu/exec', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: `email=${encodeURIComponent(email)}`
+                });
+
+                if (response.ok) {
+                    responseMessage.innerText = 'Thank you for signing up! We’ll keep you updated.';
+                    responseMessage.classList.remove('hidden');
+                    document.getElementById('signupForm').reset();
+                } else {
+                    responseMessage.innerText = 'Something went wrong. Please try again later.';
+                    responseMessage.classList.remove('hidden');
+                }
+            } catch (error) {
+                responseMessage.innerText = 'Network error. Please try again later.';
+                responseMessage.classList.remove('hidden');
+            }
+        });
+    </script>
 </section>
 
     <!-- Blog Overview and Blog Posts -->
