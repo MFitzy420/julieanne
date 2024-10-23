@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie-Anne Memorial Wall</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .note {
+            width: 200px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            margin: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .note:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-500 text-white py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Julie-Anne Memorial & Thoughts Wall</h1>
+            <p class="mt-2">Honoring memories, sharing reflections.</p>
+            <a href="index.html" class="underline">Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Memorial Wall Section -->
+    <section class="py-10 bg-green-50">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-6">Memorial Wall</h2>
+            <p class="text-center mb-6">Share a photo and message in memory of a loved one. Your message will be reviewed before appearing.</p>
+            <div class="flex flex-wrap justify-center" id="memorialWall">
+                <!-- Example pinned note (can be generated dynamically after approval) -->
+                <div class="note" onclick="openNote('memorial1')">
+                    <img src="https://via.placeholder.com/150" alt="Memory Image" class="rounded mb-2">
+                    <p class="font-bold">In Loving Memory</p>
+                    <p class="text-sm text-gray-600">Click to read more...</p>
+                </div>
+                <!-- Example modal for note details -->
+                <div id="memorial1" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md">
+                        <h3 class="text-2xl font-bold mb-4">In Loving Memory</h3>
+                        <img src="https://via.placeholder.com/150" alt="Memory Image" class="rounded mb-4">
+                        <p class="text-gray-700">This is a beautiful tribute to a life well-lived.</p>
+                        <button onclick="closeNote('memorial1')" class="bg-green-500 text-white px-4 py-2 rounded mt-4">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-6">
+                <button class="bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-600" onclick="document.getElementById('memorialForm').classList.toggle('hidden')">Share a Memory</button>
+                <form action="https://script.google.com/macros/s/AKfycbwbZ_ijdsKKf6KICGlZ3U0OLMTZCTYbk6FAsR4eKUv2mTlqz5fhgADW-VuVHQNr-v-Y/exec" method="post" id="memorialForm" class="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto mt-4 hidden">
+                    <input type="text" name="name" placeholder="Your Name (Optional)" class="w-full p-2 border rounded-lg mb-4">
+                    <input type="email" name="email" placeholder="Your Email (Required)" required class="w-full p-2 border rounded-lg mb-4">
+                    <input type="text" name="title" placeholder="Title for the Memory" required class="w-full p-2 border rounded-lg mb-4">
+                    <textarea name="message" placeholder="Share a few words..." required class="w-full p-2 border rounded-lg mb-4"></textarea>
+                    <input type="url" name="imageURL" placeholder="Image URL (Optional)" class="w-full p-2 border rounded-lg mb-4">
+                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg w-full">Submit for Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thoughts Wall Section -->
+    <section class="py-10">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-6">Thoughts Wall</h2>
+            <p class="text-center mb-6">Share your thoughts and reflections anonymously or with your name. Your post will be reviewed before appearing.</p>
+            <div class="flex flex-wrap justify-center" id="thoughtsWall">
+                <!-- Example pinned thought (can be generated dynamically after approval) -->
+                <div class="note" onclick="openNote('thought1')">
+                    <p class="font-bold">"Some days are harder than others."</p>
+                    <p class="text-sm text-gray-600">Click to read more...</p>
+                </div>
+                <!-- Example modal for thought details -->
+                <div id="thought1" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md">
+                        <h3 class="text-2xl font-bold mb-4">"Some days are harder than others."</h3>
+                        <p class="text-gray-700">Sharing my journey through the ups and downs of life. It’s okay to not be okay.</p>
+                        <button onclick="closeNote('thought1')" class="bg-green-500 text-white px-4 py-2 rounded mt-4">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-6">
+                <button class="bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-600" onclick="document.getElementById('thoughtForm').classList.toggle('hidden')">Share a Thought</button>
+                <form action="https://script.google.com/macros/s/AKfycbwbZ_ijdsKKf6KICGlZ3U0OLMTZCTYbk6FAsR4eKUv2mTlqz5fhgADW-VuVHQNr-v-Y/exec" method="post" id="thoughtForm" class="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto mt-4 hidden">
+                    <input type="text" name="name" placeholder="Your Name (Optional)" class="w-full p-2 border rounded-lg mb-4">
+                    <input type="email" name="email" placeholder="Your Email (Required)" required class="w-full p-2 border rounded-lg mb-4">
+                    <textarea name="message" placeholder="Share your thoughts..." required class="w-full p-2 border rounded-lg mb-4"></textarea>
+                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg w-full">Submit for Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts for opening and closing notes -->
+    <script>
+        function openNote(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function closeNote(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
+
+    <footer class="bg-green-500 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>Contact Us: <a href="mailto:help@julie-anne.com" class="underline">help@julie-anne.com</a></p>
+            <p>&copy; 2024 Julie-Anne. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
