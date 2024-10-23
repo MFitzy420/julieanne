@@ -54,14 +54,13 @@
             </div>
             <div class="text-center mt-6">
                 <button class="bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-600" onclick="document.getElementById('memorialForm').classList.toggle('hidden')">Share a Memory</button>
-                <form action="https://script.google.com/macros/s/AKfycbwbZ_ijdsKKf6KICGlZ3U0OLMTZCTYbk6FAsR4eKUv2mTlqz5fhgADW-VuVHQNr-v-Y/exec" method="post" id="memorialForm" class="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto mt-4 hidden">
+                <form action="https://script.google.com/macros/s/AKfycbxK_4V3u5P6viHJHe8jgEga9KaHjrKskUbJH0Wk0A5gMKKATsWwRe27zdy5ctZJOzmW/exec" method="post">
                     <input type="text" name="name" placeholder="Your Name (Optional)" class="w-full p-2 border rounded-lg mb-4">
                     <input type="email" name="email" placeholder="Your Email (Required)" required class="w-full p-2 border rounded-lg mb-4">
-                    <input type="text" name="title" placeholder="Title for the Memory" required class="w-full p-2 border rounded-lg mb-4">
-                    <textarea name="message" placeholder="Share a few words..." required class="w-full p-2 border rounded-lg mb-4"></textarea>
+                    <textarea name="message" placeholder="Share your thoughts or memory..." required class="w-full p-2 border rounded-lg mb-4"></textarea>
                     <input type="url" name="imageURL" placeholder="Image URL (Optional)" class="w-full p-2 border rounded-lg mb-4">
                     <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg w-full">Submit for Review</button>
-                </form>
+            </form>
             </div>
         </div>
     </section>
@@ -88,12 +87,13 @@
             </div>
             <div class="text-center mt-6">
                 <button class="bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-600" onclick="document.getElementById('thoughtForm').classList.toggle('hidden')">Share a Thought</button>
-                <form action="https://script.google.com/macros/s/AKfycbwbZ_ijdsKKf6KICGlZ3U0OLMTZCTYbk6FAsR4eKUv2mTlqz5fhgADW-VuVHQNr-v-Y/exec" method="post" id="thoughtForm" class="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto mt-4 hidden">
+               <form action="https://script.google.com/macros/s/AKfycbxK_4V3u5P6viHJHe8jgEga9KaHjrKskUbJH0Wk0A5gMKKATsWwRe27zdy5ctZJOzmW/exec" method="post">
                     <input type="text" name="name" placeholder="Your Name (Optional)" class="w-full p-2 border rounded-lg mb-4">
                     <input type="email" name="email" placeholder="Your Email (Required)" required class="w-full p-2 border rounded-lg mb-4">
-                    <textarea name="message" placeholder="Share your thoughts..." required class="w-full p-2 border rounded-lg mb-4"></textarea>
+                    <textarea name="message" placeholder="Share your thoughts or memory..." required class="w-full p-2 border rounded-lg mb-4"></textarea>
+                    <input type="url" name="imageURL" placeholder="Image URL (Optional)" class="w-full p-2 border rounded-lg mb-4">
                     <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg w-full">Submit for Review</button>
-                </form>
+            </form>
             </div>
         </div>
     </section>
