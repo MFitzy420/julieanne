@@ -62,59 +62,78 @@
             </div>
         </div>
 
-      <!-- Additional Features with Images -->
+      <!-- Additional Features of Julie-Anne -->
 <section class="py-10">
-    <div class="container mx-auto">
-        <h2 class="text-2xl font-bold text-center mb-6">Additional Features of Julie-Anne</h2>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://img.icons8.com/color/96/chat--v1.png" alt="Ongoing Support Icon" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-semibold text-green-600">Ongoing Support</h3>
-                <p class="text-gray-600 mt-2">Create a private account for personalized conversations and follow-ups on your progress.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://img.icons8.com/color/96/language.png" alt="Multi-Language Icon" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-semibold text-green-600">Multi-Language & Accents</h3>
-                <p class="text-gray-600 mt-2">Available in multiple languages and accents to ensure everyone feels heard and understood.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://img.icons8.com/color/96/clock--v1.png" alt="Out-of-Hours Icon" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-semibold text-green-600">Out-of-Hours Service</h3>
-                <p class="text-gray-600 mt-2">A valuable resource for after-hours support, complementing existing services like Mind.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://img.icons8.com/color/96/handshake.png" alt="Non-Judgmental Icon" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-semibold text-green-600">Non-Judgmental Approach</h3>
-                <p class="text-gray-600 mt-2">Providing a safe space for open conversations without judgment.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://img.icons8.com/color/96/infinity.png" alt="Unlimited Time Icon" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-semibold text-green-600">Unlimited Time</h3>
-                <p class="text-gray-600 mt-2">The service is available as long as you need, offering continued support when others may not be available.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://img.icons8.com/color/96/ambulance.png" alt="Reducing Ambulance Calls Icon" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-semibold text-green-600">Reducing Ambulance Call-Outs</h3>
-                <p class="text-gray-600 mt-2">Aims to minimize emergency service calls related to loneliness, freeing up valuable resources.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://img.icons8.com/color/96/family.png" alt="Parent Feature Icon" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-semibold text-green-600">Parent Feature</h3>
-                <p class="text-gray-600 mt-2">Support for parents to communicate difficult topics with their children.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://img.icons8.com/color/96/musical-notes.png" alt="Calming Voice Icon" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-semibold text-green-600">Calming Voice for Children</h3>
-                <p class="text-gray-600 mt-2">Helps children manage emotions with a soothing, interactive experience.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://img.icons8.com/color/96/heart-health.png" alt="Wellness Check-Ins Icon" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-semibold text-green-600">Wellness Check-Ins</h3>
-                <p class="text-gray-600 mt-2">Regular check-ins to track progress and offer encouragement, helping users stay on their path to well-being.</p>
+    <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-4">Additional Features of Julie-Anne</h2>
+        <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 focus:outline-none" onclick="toggleFeatures()">
+            <span id="chevrons">▼▼▼ Expand for more detail ▼▼▼</span>
+        </button>
+        <div id="features" class="hidden mt-6">
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/color/96/chat--v1.png" alt="Ongoing Support Icon" class="mx-auto mb-4 w-16">
+                    <h3 class="text-xl font-semibold text-green-600">Ongoing Support</h3>
+                    <p class="text-gray-600 mt-2">Create a private account for personalized conversations and follow-ups on your progress.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/color/96/language.png" alt="Multi-Language Icon" class="mx-auto mb-4 w-16">
+                    <h3 class="text-xl font-semibold text-green-600">Multi-Language & Accents</h3>
+                    <p class="text-gray-600 mt-2">Available in multiple languages and accents to ensure everyone feels heard and understood.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/color/96/clock--v1.png" alt="Out-of-Hours Icon" class="mx-auto mb-4 w-16">
+                    <h3 class="text-xl font-semibold text-green-600">Out-of-Hours Service</h3>
+                    <p class="text-gray-600 mt-2">A valuable resource for after-hours support, complementing existing services like Mind.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/color/96/handshake.png" alt="Non-Judgmental Icon" class="mx-auto mb-4 w-16">
+                    <h3 class="text-xl font-semibold text-green-600">Non-Judgmental Approach</h3>
+                    <p class="text-gray-600 mt-2">Providing a safe space for open conversations without judgment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/color/96/infinity.png" alt="Unlimited Time Icon" class="mx-auto mb-4 w-16">
+                    <h3 class="text-xl font-semibold text-green-600">Unlimited Time</h3>
+                    <p class="text-gray-600 mt-2">The service is available as long as you need, offering continued support when others may not be available.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/color/96/ambulance.png" alt="Reducing Ambulance Calls Icon" class="mx-auto mb-4 w-16">
+                    <h3 class="text-xl font-semibold text-green-600">Reducing Ambulance Call-Outs</h3>
+                    <p class="text-gray-600 mt-2">Aims to minimize emergency service calls related to loneliness, freeing up valuable resources.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/color/96/family.png" alt="Parent Feature Icon" class="mx-auto mb-4 w-16">
+                    <h3 class="text-xl font-semibold text-green-600">Parent Feature</h3>
+                    <p class="text-gray-600 mt-2">Support for parents to communicate difficult topics with their children.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/color/96/musical-notes.png" alt="Calming Voice Icon" class="mx-auto mb-4 w-16">
+                    <h3 class="text-xl font-semibold text-green-600">Calming Voice for Children</h3>
+                    <p class="text-gray-600 mt-2">Helps children manage emotions with a soothing, interactive experience.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/color/96/heart-health.png" alt="Wellness Check-Ins Icon" class="mx-auto mb-4 w-16">
+                    <h3 class="text-xl font-semibold text-green-600">Wellness Check-Ins</h3>
+                    <p class="text-gray-600 mt-2">Regular check-ins to track progress and offer encouragement, helping users stay on their path to well-being.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    function toggleFeatures() {
+        const features = document.getElementById('features');
+        const chevrons = document.getElementById('chevrons');
+        if (features.classList.contains('hidden')) {
+            features.classList.remove('hidden');
+            chevrons.innerHTML = '▲▲▲ Collapse Details ▲▲▲';
+        } else {
+            features.classList.add('hidden');
+            chevrons.innerHTML = '▼▼▼ Expand for more detail ▼▼▼';
+        }
+    }
+</script>
 
 <!-- Immediate Support Resources - Compact Table -->
 <section class="py-10 bg-green-50">
