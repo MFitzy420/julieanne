@@ -18,6 +18,34 @@
             </a>
         </div>
     </header>
+<!-- Form to Add a Memory -->
+<section class="py-10 bg-green-50">
+    <div class="container mx-auto">
+        <h2 class="text-2xl font-bold text-center mb-4">Add a Memory</h2>
+        <form id="addMemoryForm" class="bg-white p-4 rounded-lg shadow-lg max-w-md mx-auto">
+            <input type="text" id="memoryName" placeholder="Name of the Loved One" required class="w-full p-2 border border-gray-300 rounded-lg mb-4">
+            <textarea id="memoryMessage" placeholder="Share a memory..." required class="w-full p-2 border border-gray-300 rounded-lg mb-4"></textarea>
+            <input type="url" id="memoryImageURL" placeholder="Image URL (optional)" class="w-full p-2 border border-gray-300 rounded-lg mb-4">
+            <input type="email" id="memoryEmail" placeholder="Your Email (for approval)" required class="w-full p-2 border border-gray-300 rounded-lg mb-4">
+            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg w-full font-semibold hover:bg-green-600">Submit Memory</button>
+            <p id="memoryResponseMessage" class="mt-4 text-green-500 hidden"></p>
+        </form>
+    </div>
+</section>
+
+<!-- Form to Add a Thought -->
+<section class="py-10 bg-green-50">
+    <div class="container mx-auto">
+        <h2 class="text-2xl font-bold text-center mb-4">Add a Thought</h2>
+        <form id="addThoughtForm" class="bg-white p-4 rounded-lg shadow-lg max-w-md mx-auto">
+            <textarea id="thoughtMessage" placeholder="Share your thoughts..." required class="w-full p-2 border border-gray-300 rounded-lg mb-4"></textarea>
+            <input type="text" id="thoughtName" placeholder="Your Name (optional)" class="w-full p-2 border border-gray-300 rounded-lg mb-4">
+            <input type="email" id="thoughtEmail" placeholder="Your Email (for approval)" required class="w-full p-2 border border-gray-300 rounded-lg mb-4">
+            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg w-full font-semibold hover:bg-green-600">Submit Thought</button>
+            <p id="thoughtResponseMessage" class="mt-4 text-green-500 hidden"></p>
+        </form>
+    </div>
+</section>
 
     <!-- Intro Section -->
     <section class="py-6">
